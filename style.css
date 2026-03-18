@@ -1,0 +1,269 @@
+
+/* QESTERO Italic */
+@font-face {
+    font-family: 'QESTERO';
+    src: url('font/QESTERO-Italic.woff2') format('woff2'),
+         url('font/QESTERO-Italic.woff') format('woff'),
+         url('font/QESTERO-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* QESTERO Regular */
+@font-face {
+    font-family: 'QESTERO';
+    src: url('font/QESTERO-Regular.woff2') format('woff2'),
+         url('font/QESTERO-Regular.woff') format('woff'),
+         url('font/QESTERO-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Marianna */
+@font-face {
+    font-family: 'Marianna';
+    src: url('font/marianna.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ginebra';
+    src: url('font/ginebra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Viaoda';
+    src: url('font/ViaodaLibre-Redular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Viaoda Libre через Google Fonts */
+/*@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #ffffff; /* белый цвет текста */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+/* Плавный скролл */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Шапка */
+header {
+  width: 100%;
+  padding: 20px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+header nav a {
+  font-family: 'Ginebra', serif;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #f39c12;
+}
+
+/* Hero с фоном */
+.hero {
+  height: 100vh; /* на весь экран */
+  background: url("image/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  padding: 0 20px;
+}
+
+/* Разделы */
+#about, #services, #projects, #reviews, #contacts {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+
+/* О нас */
+.intro {
+  background: #fff;
+  padding: 40px 0;
+}
+
+/* Верхняя строка с кнопкой и слоганом */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Кнопка */
+.btn-project {
+  width: 50%;                 /* половина ширины */
+  background: #fff;
+  color: #000;
+  border: 2px solid #000;
+  padding: 16px;
+  font-size: 18px;
+  font-family: 'ViaodaLibre-Regular', serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-project:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Слоган */
+.slogan {
+  width: 50%;                 /* вторая половина */
+  text-align: right;          /* выравнивание вправо */
+  font-family: 'marianna', cursive;
+  font-size: 22px;
+  color: #000;
+  padding-right: 20px;
+}
+
+/* Основной блок: текст + фото */
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.intro-text {
+  width: 50%;
+  font-family: 'ViaodaLibre-Regular', serif;
+}
+
+.intro-text h3 {
+  font-family: 'marianna', cursive;
+  font-size: 26px;
+  margin: 0 0 20px 0;
+}
+
+
+.intro-text h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.intro-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.intro-photo {
+  width: 40%;
+}
+
+.intro-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Услуги */
+#services {
+  background: #fff;
+  color: #333;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#services h2 {
+  font-family: 'ViaodaLibre-Regular', serif; /* можешь поставить Marianna или другой */
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+#services h2::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(to right, #333, transparent);
+  margin: 10px auto 0;
+}
+
+.services-list {
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.services-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: 'QESTERO', serif;
+}
+
+/* Декоративная первая буква */
+.services-list .decor-letter {
+  font-family: 'ginebra', cursive; /* или Marianna */
+  font-size: 32px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Кружки справа */
+.services-list .circle {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #4a3f35;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+
+/* Футер */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
