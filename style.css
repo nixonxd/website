@@ -282,6 +282,149 @@ a {
   filter: grayscale(1);
 }
 
+#projects {
+  padding-top: 36px;
+  padding-bottom: 44px;
+}
+
+.projects-section {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.projects-section h2 {
+  margin: 0 0 44px;
+  text-align: center;
+  font-family: "Custodia Deco", serif;
+  font-size: 60pt;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+
+.project-slot {
+  min-height: 1px;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+}
+
+.project-card-media {
+  position: relative;
+  overflow: hidden;
+  background: #e8dfd5;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+}
+
+.project-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(46, 31, 20, 0.16);
+  transition: inset 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 0.86;
+  object-fit: cover;
+  transition: transform 0.45s ease, filter 0.35s ease;
+}
+
+.project-card-title {
+  margin: 20px 0 0;
+  text-align: center;
+  font-family: "Marianna", cursive;
+  font-size: clamp(2.8rem, 2.1rem + 1.8vw, 4.6rem);
+  line-height: 0.88;
+  color: #1b140f;
+}
+
+.project-card:hover .project-card-media,
+.project-card:focus-visible .project-card-media {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 44px rgba(43, 28, 16, 0.16);
+}
+
+.project-card:hover .project-card-media::after,
+.project-card:focus-visible .project-card-media::after {
+  inset: 14px;
+  border-color: rgba(255, 248, 240, 0.9);
+  background-color: rgba(255, 248, 240, 0.08);
+}
+
+.project-card:hover img,
+.project-card:focus-visible img {
+  transform: scale(1.03);
+  filter: saturate(1.05) brightness(1.03);
+}
+
+.project-card:focus-visible {
+  outline: none;
+}
+
+.project-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 24px;
+}
+
+.project-page-hero {
+  width: min(100%, 860px);
+  padding: 56px 32px;
+  text-align: center;
+  background: rgba(255, 252, 247, 0.72);
+  border: 1px solid rgba(46, 31, 20, 0.12);
+  box-shadow: 0 24px 60px rgba(43, 28, 16, 0.1);
+}
+
+.project-page-kicker {
+  margin: 0 0 12px;
+  font-family: "Marianna", cursive;
+  font-size: clamp(2rem, 1.6rem + 1vw, 3rem);
+}
+
+.project-page-hero h1 {
+  margin: 0 0 16px;
+  font-family: "Custodia Deco", serif;
+  font-size: clamp(3rem, 2.5rem + 2vw, 5rem);
+  font-weight: 400;
+}
+
+.project-page-note {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  font-family: "Viaoda", serif;
+  font-size: clamp(1.2rem, 1rem + 0.6vw, 1.7rem);
+  line-height: 1.5;
+}
+
+.project-page-back {
+  display: inline-block;
+  padding: 12px 22px;
+  text-decoration: none;
+  border: 1px solid rgba(46, 31, 20, 0.7);
+  font-family: "Custodia Deco", serif;
+  font-size: 1rem;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.project-page-back:hover,
+.project-page-back:focus-visible {
+  background: #2e1f14;
+  color: #fffaf6;
+  transform: translateY(-1px);
+}
+
 #services {
   max-width: 1120px;
   margin: 0 auto;
@@ -384,6 +527,15 @@ footer {
 
   .intro-text p {
     font-size: clamp(1.2rem, 1rem + 0.8vw, 1.6rem);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .project-slot {
+    display: none;
   }
 }
 
